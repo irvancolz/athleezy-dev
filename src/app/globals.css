@@ -1,42 +1,53 @@
+@import url("https://fonts.cdnfonts.com/css/druk-wide-bold");
+@import url("https://fonts.cdnfonts.com/css/hanken-grotesk");
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --druk-wide-bold-font: "Druk Wide Bold", sans-serif;
+  --hanken-grotesk-font: "Hanken Grotesk", sans-serif;
+
+  --heading-font: var(--druk-wide-bold-font);
+  --text-font: var(--hanken-grotesk-font);
+  --col-white: #fff;
+  --col-dark: #212121;
+  --col-gray: #d1d1d1;
+  --col-gray-100: #faf9f8;
+  --col-gray-200: #e7e7e7;
+  --col-gray-300: #b0b0b0;
+  --col-gray-400: #888;
+  --col-gray-700: #6d6d6d;
+  --col-brown: #eeebe7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,
-body {
-  max-width: 100vw;
+html {
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+p {
+  --text-fsz: 0.75rem;
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: var(--text-fsz);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media (min-width: 768px) {
+  p {
+    --text-fsz: 1rem;
   }
 }
