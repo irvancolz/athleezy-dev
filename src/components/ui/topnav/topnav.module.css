@@ -30,6 +30,7 @@
 .title_container > button {
   display: block;
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 .main_nav {
