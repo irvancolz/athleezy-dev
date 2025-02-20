@@ -28,6 +28,8 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  color: var(--col-dark);
 }
 
 h1,
@@ -44,6 +46,17 @@ p {
   font-family: var(--text-font);
   font-weight: 500;
   font-size: var(--text-fsz);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
 }
 
 @media (min-width: 768px) {
