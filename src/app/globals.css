@@ -31,6 +31,7 @@ html {
   scroll-behavior: smooth;
   background-color: var(--col-dark);
   color: var(--col-dark);
+  font-family: var(--text-font);
 }
 
 h1,
