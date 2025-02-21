@@ -31,6 +31,16 @@
   flex-basis: 100%;
 }
 
+.blog {
+  display: none;
+}
+
+.blog:nth-child(1),
+.blog:nth-child(2),
+.blog:nth-child(3) {
+  display: flex;
+}
+
 .blog_img {
   --blogimg-w: 4.75rem;
   --blogimg-radius: 0.5rem;
@@ -61,6 +71,7 @@
     --blogct-gap: 1.5rem;
   }
   .blog {
+    display: flex;
     --blog-p: 0.5rem;
     --blog-radius: 0.75rem;
     flex-basis: calc((100% - (var(--blogct-gap) * 2)) / 3);
