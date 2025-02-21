@@ -14,10 +14,15 @@ export function Button({
   variant = "primary",
   leftIcon,
   rightIcon,
+  className,
   ...rest
 }: ButtonProps) {
   return (
-    <button className={styles.container} {...rest} data-variant={variant}>
+    <button
+      className={`${styles.container} ${className}`}
+      {...rest}
+      data-variant={variant}
+    >
       <span className={styles.icon}>{leftIcon}</span>
       {children}
       <span className={styles.icon}>{rightIcon}</span>
