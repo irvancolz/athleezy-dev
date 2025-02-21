@@ -1,10 +1,10 @@
 .container {
   --py: 0.75rem;
   --px: 0.5rem;
-  --bg-col: var(--col-dark);
+  --bg-col: linear-gradient(180deg, #454545 0%, #212121 100%);
   --col: var(--col-white);
   --fsz: 0.75rem;
-  background-color: var(--bg-col);
+  background: var(--bg-col);
   display: flex;
   align-items: center;
   justify-content: center;

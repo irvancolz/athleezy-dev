@@ -10,6 +10,8 @@
   font-weight: 600;
   --fsz: 0.75rem;
   font-size: var(--fsz);
+  padding: 0.25rem 0.75rem;
+  box-shadow: 0 1px 2px #2a212013;
 }
 
 @media (min-width: 768px) {

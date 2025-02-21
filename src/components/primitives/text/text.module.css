@@ -1,5 +1,5 @@
 .container {
-  --fsz: 1.25rem;
+  --fsz: 0.75rem;
   text-transform: capitalize;
   font-size: var(--fsz);
   text-align: var(--textAlign-sm);
@@ -8,7 +8,7 @@
 
 @media (min-width: 768px) {
   .container {
-    --fsz: 1.75rem;
+    --fsz: 1rem;
     text-align: var(--textAlign);
   }
 }

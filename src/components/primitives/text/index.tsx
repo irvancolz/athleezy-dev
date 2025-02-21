@@ -30,20 +30,22 @@ export function Text({
   align = "left",
   alignSm = "center",
   color = "gray-400",
+  className = ""
 }: {
   children: ReactNode;
   align?: TextAlign;
   alignSm?: TextAlign;
   color?: TextColor;
+  className?: string
 }) {
   return (
     <p
-      className={styles.container}
+      className={`${styles.container} ${className}`}
       style={
         {
           "--textAlign-sm": alignSm,
           "--textAlign": align,
-          "--col": TEXT_COLOR[color],
+          "--col": `var(${TEXT_COLOR[color]})`,
         } as CSSProperties
       }
     >
