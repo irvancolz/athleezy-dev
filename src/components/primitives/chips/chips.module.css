@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: var(--col-white);
+  border-radius: 1000px;
+  border: 1px solid var(--col-brown);
+  color: var(--col-black);
+  text-transform: capitalize;
+  font-weight: 600;
+  --fsz: 0.75rem;
+  font-size: var(--fsz);
+}
+
+@media (min-width: 768px) {
+  .container {
+    --fsz: 0.85rem;
+  }
+}
