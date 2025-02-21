@@ -270,7 +270,7 @@ export function MainShop() {
                 src={product.img.src}
                 alt={product.title}
               />
-              <div>
+              <div className={styles.product_body}>
                 <p className={styles.product_price}>{product.price}</p>
                 <h3 className={styles.product_title}>{product.title}</h3>
                 <Text className={styles.product_desc} alignSm="left">
