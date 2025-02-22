@@ -17,12 +17,14 @@
   bottom: 0;
   left: -1rem;
   width: 100%;
-  aspect-ratio: 1440/211.75;
-  background: url(/public/footer-watermark-sm.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top left;
-  pointer-events: none;
+}
+
+.watermark picture,
+.watermark img,
+.watermark source {
+  object-fit: contain;
+  width: 100%;
+  max-width: 100%;
 }
 
 .title {
@@ -69,9 +71,7 @@
     --ct-p: 3.75rem 5rem 12.5rem;
     --ct-fdir: row;
   }
-  .watermark {
-    background: url(/public/footer-watermark.png);
-  }
+
   .copyright {
     --copyright-fsz: 1.25rem;
   }

@@ -1,6 +1,9 @@
 import { URL } from "@/type";
 import styles from "./footer.module.css";
 import Link from "next/link";
+import wm from "@public/footer-watermark.png";
+import wmSm from "@public/footer-watermark-sm.png";
+import { Picture } from "@/components/primitives";
 
 const socialMediaLinks: URL[] = [
   {
@@ -73,7 +76,9 @@ const FOOTER_LINKS: { title: string; links: URL[] }[] = [
 export function Footer() {
   return (
     <footer className={styles.container}>
-      <div className={styles.watermark}></div>
+      <div className={styles.watermark}>
+        <Picture url={wm.src} urlSm={wmSm.src} />
+      </div>
       <div>
         <h2 className={styles.title}>atlzy</h2>
         <p className={styles.copyright}>Copyright@2025</p>
