@@ -1,13 +1,7 @@
 .container {
-  --ct-p: 1.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--ct-p);
-  position: sticky;
-  width: 100vw;
-  top: -1px;
-  left: 0;
 }
 
 .title_container {
@@ -142,9 +136,6 @@
 }
 
 @media (min-width: 768px) {
-  .container {
-    --ct-p: 1.5rem 3.75rem;
-  }
   .title_container {
     --titlect-wdth: fit-content;
   }

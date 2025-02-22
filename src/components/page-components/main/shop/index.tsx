@@ -236,7 +236,7 @@ const PRODUCTS_LIST = Array.from({ length: 4 }).map(() => product);
 export function MainShop() {
   const [category, setCategory] = useState<string>("footwear");
   return (
-    <SectionWrapper className={styles.container}>
+    <SectionWrapper id="shop" className={styles.container}>
       <div className={styles.header}>
         <SectionHeader
           title="shop"

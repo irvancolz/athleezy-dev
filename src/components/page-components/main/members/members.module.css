@@ -109,6 +109,9 @@
   flex-grow: 1;
   flex-basis: 50%;
 }
+.player_content {
+  padding-inline: 0.5rem;
+}
 
 @media (min-width: 768px) {
   .header {

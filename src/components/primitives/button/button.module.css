@@ -13,7 +13,7 @@
   color: var(--col);
   border-radius: 0.5rem;
   font-family: var(--hanken-grotesk-font);
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
   font-size: var(--fsz);
 }

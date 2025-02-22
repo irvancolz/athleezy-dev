@@ -133,39 +133,42 @@ export function MainMembers() {
                   src={player.img.src}
                   alt={player.name}
                 />
-                <div className={styles.stats_container}>
-                  <div className={styles.stats}>
-                    <Text alignSm="left" className={styles.stats_label}>
-                      position
-                    </Text>
-                    <Text alignSm="left" className={styles.stats_value}>
-                      {player.position}
-                    </Text>
-                  </div>
-                  <div className={styles.stats}>
-                    <Text alignSm="left" className={styles.stats_label}>
-                      date of birth
-                    </Text>
-                    <Text alignSm="left" className={styles.stats_value}>
-                      {player.dob}
-                    </Text>
-                  </div>
-                  <div className={styles.stats}>
-                    <Text alignSm="left" className={styles.stats_label}>
-                      nationality
-                    </Text>
-                    <Text alignSm="left" className={styles.stats_value}>
-                      {player.nation}
-                    </Text>
-                  </div>
-                  <div className={styles.stats}>
-                    <Text alignSm="left" className={styles.stats_label}>
-                      height
-                    </Text>
-                    <Text
-                      alignSm="left"
-                      className={styles.stats_value}
-                    >{`${player.height} m`}</Text>
+                <div className={styles.player_content}>
+                  <h3 className={styles.player_title}>{player.name}</h3>
+                  <div className={styles.stats_container}>
+                    <div className={styles.stats}>
+                      <Text alignSm="left" className={styles.stats_label}>
+                        position
+                      </Text>
+                      <Text alignSm="left" className={styles.stats_value}>
+                        {player.position}
+                      </Text>
+                    </div>
+                    <div className={styles.stats}>
+                      <Text alignSm="left" className={styles.stats_label}>
+                        date of birth
+                      </Text>
+                      <Text alignSm="left" className={styles.stats_value}>
+                        {player.dob}
+                      </Text>
+                    </div>
+                    <div className={styles.stats}>
+                      <Text alignSm="left" className={styles.stats_label}>
+                        nationality
+                      </Text>
+                      <Text alignSm="left" className={styles.stats_value}>
+                        {player.nation}
+                      </Text>
+                    </div>
+                    <div className={styles.stats}>
+                      <Text alignSm="left" className={styles.stats_label}>
+                        height
+                      </Text>
+                      <Text
+                        alignSm="left"
+                        className={styles.stats_value}
+                      >{`${player.height} m`}</Text>
+                    </div>
                   </div>
                 </div>
               </li>

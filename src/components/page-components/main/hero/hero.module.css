@@ -1,4 +1,124 @@
 .container {
-  --ct-p: 3.75rem;
-  padding: var(--ct-p);
+  --ct-aspect: 393/ 796;
+  --ct-px: 1rem;
+  --ct-py: 1.5rem;
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ct-aspect);
+  padding-block: var(--ct-py);
+  padding-inline: var(--ct-px);
+  overflow: hidden;
+}
+
+.background_img,
+.background_img source,
+.background_img img {
+  position: absolute;
+  inset: 0 0 0 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.content {
+  position: absolute;
+  left: var(--ct-px);
+  bottom: var(--ct-py);
+  z-index: 1;
+  width: calc(100% - (var(--ct-px) * 2));
+}
+
+.title {
+  --title-fsz: 1.5rem;
+  font-size: var(--title-fsz);
+  color: var(--col-white);
+  text-transform: capitalize;
+}
+
+.title span {
+  text-decoration: underline;
+}
+
+.description_container {
+  --descct-my: 0.75rem 1.5rem;
+  --descct-fdir: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: var(--descct-fdir);
+  margin-block: var(--descct-my);
+  gap: 1rem;
+}
+
+.description {
+  --desc-maw: unset;
+  max-width: var(--desc-maw);
+}
+
+.contribution_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contribution {
+  position: relative;
+  padding-inline: 1.5rem;
+  text-align: center;
+  color: var(--col-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.contribution:not(:last-child):after {
+  content: "";
+  background-color: var(--col-white);
+  width: 1px;
+  height: 2.75rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  translate: 0 25%;
+}
+
+.contribution_count {
+  margin-bottom: 0.5rem;
+  --ctrbtcount-fsz: 1rem;
+  font-size: var(--ctrbtcount-fsz);
+  font-family: var(--heading-font);
+}
+
+.contribution_label {
+  --ctrbtlbl-fsz: 0.75rem;
+  font-size: var(--ctrbtlbl-fsz);
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .container {
+    --ct-px: 3.75rem;
+    --ct-py: 3.75rem;
+    --ct-aspect: 1440/ 923;
+  }
+
+  .title {
+    --title-fsz: 2.15rem;
+  }
+  .description_container {
+    --descct-fdir: row;
+    --descct-my: 0.75rem 2rem;
+  }
+  .description {
+    --desc-maw: 30em;
+  }
+  .contribution_count {
+    --ctrbtcount-fsz: 1.5rem;
+  }
+  .contribution_label {
+    --ctrbtlbl-fsz: 1.25rem;
+  }
 }

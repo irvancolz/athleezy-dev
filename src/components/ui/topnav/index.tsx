@@ -25,7 +25,7 @@ const PATH: { label: string; href: string }[] = [
   },
 ];
 
-export function Topnav() {
+export function Topnav({ className }: { className: string }) {
   const [active, setActive] = useState<string>("");
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
@@ -74,7 +74,7 @@ export function Topnav() {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${className}`}>
         <div className={styles.title_container}>
           <Link href="#" className={styles.title}>
             atlzy
