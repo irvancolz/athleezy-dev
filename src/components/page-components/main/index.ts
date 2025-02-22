@@ -7,3 +7,4 @@ export * from "./about";
 export * from "./training";
 export * from "./faq";
 export * from "./testimonials";
+export * from "./marquee";

@@ -4,6 +4,7 @@ import {
   MainBlog,
   MainFAQ,
   MainGuides,
+  MainMarquee,
   MainMembers,
   MainShop,
   MainTestimonials,
@@ -14,6 +15,7 @@ export default function Page() {
   return (
     <>
       <Hero />
+      <MainMarquee />
       <MainAbout />
       <MainTrainingAndDevelopment />
       <MainMembers />
