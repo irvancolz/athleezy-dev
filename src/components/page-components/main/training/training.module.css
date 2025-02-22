@@ -49,7 +49,6 @@
   flex-direction: var(--contentct-fdir);
   gap: 1rem;
   justify-content: space-between;
-  align-items: center;
   margin-block: var(--contentct-my);
 }
 
