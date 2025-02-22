@@ -1,6 +1,5 @@
 .container {
   --fsz: 0.75rem;
-  text-transform: capitalize;
   font-size: var(--fsz);
   text-align: var(--textAlign-sm);
   color: var(--col);

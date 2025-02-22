@@ -6,6 +6,7 @@ import {
   MainGuides,
   MainMembers,
   MainShop,
+  MainTestimonials,
   MainTrainingAndDevelopment,
 } from "@/components";
 
@@ -18,6 +19,7 @@ export default function Page() {
       <MainMembers />
       <MainShop />
       <MainGuides />
+      <MainTestimonials />
       <MainFAQ />
       <MainBlog />
     </>
