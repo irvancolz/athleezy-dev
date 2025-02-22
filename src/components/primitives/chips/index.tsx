@@ -11,7 +11,7 @@ export function Chips({ children, icon, className = "" }: ChipsProps) {
   return (
     <div className={`${styles.container} ${className}`}>
       {/* eslint-disable-next-line */}
-      {icon && <img src={icon} alt="" />}
+      {icon && <img className={styles.icon} src={icon} alt="" />}
       {children}
     </div>
   );

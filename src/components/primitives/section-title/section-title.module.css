@@ -3,6 +3,7 @@
   text-transform: capitalize;
   font-size: var(--fsz);
   text-align: var(--textAlign-sm);
+  color: var(--col);
 }
 
 @media (min-width: 768px) {

@@ -1,5 +1,6 @@
 import {
   Hero,
+  MainAbout,
   MainBlog,
   MainGuides,
   MainMembers,
@@ -10,6 +11,7 @@ export default function Page() {
   return (
     <>
       <Hero />
+      <MainAbout />
       <MainMembers />
       <MainShop />
       <MainGuides />
