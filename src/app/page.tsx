@@ -2,6 +2,7 @@ import {
   Hero,
   MainAbout,
   MainBlog,
+  MainFAQ,
   MainGuides,
   MainMembers,
   MainShop,
@@ -17,6 +18,7 @@ export default function Page() {
       <MainMembers />
       <MainShop />
       <MainGuides />
+      <MainFAQ />
       <MainBlog />
     </>
   );

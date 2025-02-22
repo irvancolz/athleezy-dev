@@ -5,3 +5,4 @@ export * from "./guides";
 export * from "./members";
 export * from "./about";
 export * from "./training";
+export * from "./faq";

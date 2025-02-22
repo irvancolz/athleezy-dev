@@ -1,0 +1,39 @@
+.container {
+  background-color: var(--col-gray-100);
+  border: 1px solid var(--col-brown);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  --title-fsz: 0.75rem;
+  font-family: var(--heading-font);
+  font-size: var(--title-fsz);
+  text-transform: capitalize;
+}
+
+.content_container {
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.3s ease-in-out;
+  margin-top: 0.75rem;
+}
+
+.content_container[data-expanded="true"] {
+  max-height: var(--mah);
+}
+
+@media (min-width: 768px) {
+  .title {
+    --title-fsz: 1.25rem;
+  }
+}

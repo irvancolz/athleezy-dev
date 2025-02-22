@@ -4,3 +4,4 @@ export * from "./section-title";
 export * from "./text";
 export * from "./chips";
 export * from "./section-wrapper";
+export * from "./dropdown";
