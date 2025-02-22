@@ -5,6 +5,7 @@ import {
   MainGuides,
   MainMembers,
   MainShop,
+  MainTrainingAndDevelopment,
 } from "@/components";
 
 export default function Page() {
@@ -12,6 +13,7 @@ export default function Page() {
     <>
       <Hero />
       <MainAbout />
+      <MainTrainingAndDevelopment />
       <MainMembers />
       <MainShop />
       <MainGuides />

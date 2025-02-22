@@ -1,5 +1,4 @@
 import { ComponentProps } from "react";
-import styles from "./picture.module.css";
 
 type PictureProps = {
   url: string;
@@ -10,7 +9,7 @@ type PictureProps = {
 
 export function Picture({ url, urlSm, className = "", ...rest }: PictureProps) {
   return (
-    <picture {...rest} className={`${styles.container} ${className}`}>
+    <picture {...rest} className={`${className}`}>
       <source media="(min-width:768px)" srcSet={url} />
       <img src={urlSm} alt="" />
     </picture>

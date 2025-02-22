@@ -15,7 +15,7 @@ import { AboutProducts } from "@/components/components";
 
 export function MainAbout() {
   return (
-    <SectionWrapper className={styles.container}>
+    <SectionWrapper id="community" className={styles.container}>
       <div className={styles.video_content}>
         <div className={styles.header}>
           <Chips icon={rocket.src}>about us</Chips>
