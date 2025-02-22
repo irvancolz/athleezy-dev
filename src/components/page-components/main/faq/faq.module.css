@@ -14,7 +14,7 @@
 
 .container > * {
   flex-basis: 50%;
-  max-width: 50%;
+  max-width: 100%;
   flex-grow: 1;
 }
 
@@ -44,5 +44,10 @@
   }
   .question_container {
     --questionct-gap: 1.5rem;
+  }
+  .container > * {
+    flex-basis: 50%;
+    max-width: 50%;
+    flex-grow: 1;
   }
 }

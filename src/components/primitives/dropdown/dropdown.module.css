@@ -4,6 +4,8 @@
   padding: 1rem;
   border-radius: 0.75rem;
   overflow: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 .header {
@@ -19,6 +21,8 @@
   font-family: var(--heading-font);
   font-size: var(--title-fsz);
   text-transform: capitalize;
+  white-space: wrap;
+  text-align: left;
 }
 
 .content_container {

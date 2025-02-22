@@ -120,7 +120,7 @@ export function Topnav({ className }: { className: string }) {
         >
           <div className={styles.popup_title_container}>
             <p className={styles.popup_title}>menu</p>
-            <Button variant="secondary" onClick={() => setOpenMenu(false)}>
+            <Button variant="ternary" onClick={() => setOpenMenu(false)}>
               {closeIcon}
             </Button>
           </div>

@@ -83,6 +83,8 @@
 
 .actions_container > * {
   flex-basis: 100%;
+  max-width: calc(50% - 1rem);
+  white-space: wrap;
 }
 
 @media (min-width: 768px) {
@@ -106,5 +108,9 @@
   }
   .actions_container {
     --actct-maw: 60%;
+  }
+  .actions_container > * {
+    flex-basis: calc(50% - 1rem);
+    flex-grow: 1;
   }
 }

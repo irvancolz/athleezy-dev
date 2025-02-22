@@ -25,7 +25,7 @@
 
 .category {
   --category-p: 0 0.5rem 0.75rem;
-  padding: var(--category-p);
+  padding: var(--category-p) !important;
   color: var(--col-gray-300);
   display: flex;
   align-items: center;
