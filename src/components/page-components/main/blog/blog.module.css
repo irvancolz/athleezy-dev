@@ -78,6 +78,10 @@
     --blog-radius: 0.75rem;
     flex-basis: calc((100% - (var(--blogct-gap) * 2)) / 3);
   }
+  .blog p {
+    font-size: 0.7rem;
+    line-height: 150%;
+  }
   .blog_description {
     line-clamp: unset;
     -webkit-line-clamp: unset;

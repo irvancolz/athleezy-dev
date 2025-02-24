@@ -1,11 +1,14 @@
 @import url("https://fonts.cdnfonts.com/css/druk-wide-bold");
 @import url("https://fonts.cdnfonts.com/css/hanken-grotesk");
+@import url("https://fonts.cdnfonts.com/css/druk-trial");
 
 :root {
   --druk-wide-bold-font: "Druk Wide Bold", sans-serif;
+  --druk-trial-font: "Druk Trial", sans-serif;
+  --druk-wide-trial-font: "Druk Wide Trial", sans-serif;
   --hanken-grotesk-font: "Hanken Grotesk", sans-serif;
 
-  --heading-font: var(--druk-wide-bold-font);
+  --heading-font: var(--druk-wide-trial-font);
   --text-font: var(--hanken-grotesk-font);
   --col-white: #fff;
   --col-dark: #212121;
@@ -33,7 +36,7 @@ html {
   background-color: var(--col-dark);
   color: var(--col-dark);
   font-family: var(--text-font);
-  line-height: 160%;
+  line-height: 150%;
 }
 
 h1,
@@ -43,6 +46,8 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
+  font-weight: 500;
+  line-height: 150%;
 }
 
 p {

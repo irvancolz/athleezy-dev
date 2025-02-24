@@ -112,6 +112,9 @@
     --descct-fdir: row;
     --descct-my: 0.75rem 2rem;
   }
+  .description_container > p {
+    --fsz: 1.25rem;
+  }
   .description {
     --desc-maw: 30em;
   }
