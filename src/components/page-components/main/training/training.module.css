@@ -43,7 +43,6 @@
 }
 
 .card:not(:first-child) {
-  aspect-ratio: 278/554;
   height: 100%;
 }
 .content_container {
@@ -94,6 +93,9 @@
 @media (min-width: 768px) {
   .card {
     --card-radius: 1.25rem;
+  }
+  .card:first-child {
+    max-width: 56%;
   }
   .content_container {
     --contentct-fdir: row;
