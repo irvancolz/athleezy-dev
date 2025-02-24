@@ -72,7 +72,7 @@
     --header-fdir: row;
   }
   .video_content {
-    --videoct-gap: 3.75rem;
+    --videoct-gap: 3.5rem;
   }
   .video_wrapper {
     --video-ratio: 1320/320;

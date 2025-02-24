@@ -42,6 +42,10 @@
   flex-basis: 100%;
 }
 
+.card:not(:first-child) {
+  aspect-ratio: 278/554;
+  height: 100%;
+}
 .content_container {
   --contentct-fdir: column;
   --contentct-my: 2.25rem;
@@ -49,6 +53,7 @@
   flex-direction: var(--contentct-fdir);
   gap: 1rem;
   justify-content: space-between;
+  align-items: flex-start;
   margin-block: var(--contentct-my);
 }
 
@@ -106,7 +111,7 @@
     --bannertitle-fsz: 1.25rem;
   }
   .actions_container {
-    --actct-maw: 60%;
+    --actct-maw: 70%;
   }
   .actions_container > * {
     flex-basis: calc(50% - 1rem);
