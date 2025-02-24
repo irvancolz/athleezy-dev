@@ -33,6 +33,7 @@ html {
   background-color: var(--col-dark);
   color: var(--col-dark);
   font-family: var(--text-font);
+  line-height: 160%;
 }
 
 h1,

@@ -4,6 +4,7 @@
   font-size: var(--fsz);
   text-align: var(--textAlign-sm);
   color: var(--col);
+  line-height: 160%;
 }
 
 @media (min-width: 768px) {

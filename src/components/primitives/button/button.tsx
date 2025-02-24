@@ -23,9 +23,9 @@ export function Button({
       {...rest}
       data-variant={variant}
     >
-      <span className={styles.icon}>{leftIcon}</span>
+      {leftIcon}
       {children}
-      <span className={styles.icon}>{rightIcon}</span>
+      {rightIcon}
     </button>
   );
 }

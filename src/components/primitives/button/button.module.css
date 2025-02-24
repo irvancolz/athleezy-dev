@@ -11,7 +11,7 @@
   gap: 0.625rem;
   padding: var(--py) var(--px);
   color: var(--col);
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   font-family: var(--hanken-grotesk-font);
   font-weight: 500;
   text-transform: capitalize;
