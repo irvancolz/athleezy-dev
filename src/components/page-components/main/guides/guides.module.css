@@ -100,7 +100,6 @@
   --guidetitle-my: 0.25rem;
   font-size: var(--guidetitle-fsz);
   margin-block: var(--guidetitle-my);
-  height: 2.5em;
 }
 
 .guide_title,
@@ -109,7 +108,7 @@
   -webkit-box-orient: vertical;
   line-clamp: 2;
   -webkit-line-clamp: 2;
-  height: 2.5em;
+  height: 3.3em;
   overflow: hidden;
 }
 
