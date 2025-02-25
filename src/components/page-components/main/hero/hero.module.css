@@ -1,13 +1,16 @@
 .container {
   --ct-aspect: 393/ 796;
   --ct-px: 1rem;
-  --ct-py: 1.5rem;
+  --ct-pt: 1.5rem;
+  --ct-pb: 1.5rem;
   position: relative;
   width: 100%;
   aspect-ratio: var(--ct-aspect);
-  padding-block: var(--ct-py);
+  padding-top: var(--ct-pt);
+  padding-bottom: var(--ct-pb);
   padding-inline: var(--ct-px);
   overflow: hidden;
+  max-height: 100vh;
 }
 
 .background_img,
@@ -27,7 +30,7 @@
 .content {
   position: absolute;
   left: var(--ct-px);
-  bottom: var(--ct-py);
+  bottom: var(--ct-pb);
   z-index: 1;
   width: calc(100% - (var(--ct-px) * 2));
 }
@@ -101,7 +104,8 @@
 @media (min-width: 768px) {
   .container {
     --ct-px: 3.75rem;
-    --ct-py: 3.75rem;
+    --ct-pt: 2.25rem;
+    --ct-pb: 3.75rem;
     --ct-aspect: 1440/ 923;
   }
 
