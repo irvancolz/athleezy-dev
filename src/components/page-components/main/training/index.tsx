@@ -2,7 +2,7 @@ import { Button, Picture, SectionWrapper, Text } from "@/components/primitives";
 import styles from "./training.module.css";
 import { SectionHeader } from "@/components/components";
 import video from "@public/video.svg";
-import img1 from "@public/training-and-development-1-sm.png";
+import img1 from "@public/training-and-development-1.png";
 import img1Sm from "@public/training-and-development-1-sm.png";
 import img2 from "@public/training-and-development-2.png";
 import img2Sm from "@public/training-and-development-2-sm.png";

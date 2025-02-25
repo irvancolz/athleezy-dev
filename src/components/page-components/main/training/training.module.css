@@ -25,26 +25,28 @@
   overflow: hidden;
   border: 1px solid var(--col-brown);
   background-color: var(--col-gray-100);
+  position: relative;
 }
 
-.card img,
-.card picture,
-.card source {
-  border-radius: calc(var(--card-radius) - 0.5rem);
-  max-width: 100%;
-  max-height: 100%;
-  height: 100%;
+.main_banner,
+.secondary_banner,
+.main_banner *,
+.secondary_banner * {
   width: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  border-radius: 0.75rem;
 }
 
-.card:first-child {
-  flex-basis: 100%;
+.main_banner {
+  aspect-ratio: 345/240;
+  display: flex;
 }
 
-.card:not(:first-child) {
-  height: 100%;
+.secondary_banner {
+  aspect-ratio: 345/200;
+  display: flex;
 }
+
 .content_container {
   --contentct-fdir: column;
   --contentct-my: 2.25rem;
@@ -54,14 +56,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-block: var(--contentct-my);
-}
-
-.main_banner,
-.main_banner img,
-.main_banner source {
-  --mainbanner-aspect: 345/240;
-  aspect-ratio: var(--mainbanner-aspect);
-  width: 100%;
+  position: relative;
 }
 
 .banner_body {
@@ -94,18 +89,25 @@
   .card {
     --card-radius: 1.25rem;
   }
-  .card:first-child {
-    max-width: 56%;
-  }
   .content_container {
     --contentct-fdir: row;
     --contentct-my: 3.75rem;
+    align-items: normal;
   }
-  .main_banner,
-  .main_banner img,
-  .main_banner source {
-    --mainbanner-aspect: 660/328;
+  .main_banner {
+    aspect-ratio: 660/328;
+    border-radius: 1rem;
   }
+  .secondary_banner {
+    aspect-ratio: unset;
+    border-radius: 1rem;
+    height: 100%;
+    flex-grow: 1;
+    flex-basis: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
   .banner_body {
     --bannerbdy-my: 1.25rem 2rem;
   }
