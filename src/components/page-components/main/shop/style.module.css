@@ -30,11 +30,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border-bottom: 2px solid var(--col-gray-300);
   border-radius: 0px;
   flex-grow: 1;
 }
-
+.categories_container .category {
+  border-bottom: 2px solid var(--col-gray-300);
+}
 .category[data-active="true"] {
   color: var(--col-dark);
   border-bottom: 2px solid var(--col-dark);
