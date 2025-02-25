@@ -58,11 +58,6 @@
   max-width: calc(100% - var(--guidelvl-offset) * 2);
   top: var(--guidelvl-offset);
   left: var(--guidelvl-offset);
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
-  overflow: hidden;
   max-height: 1.9em;
 }
 .guide_img {
