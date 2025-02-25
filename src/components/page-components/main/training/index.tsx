@@ -75,18 +75,22 @@ export function MainTrainingAndDevelopment() {
           </div>
         </div>
         <div className={styles.card}>
+          {/* <div className={styles.img_wrapper}> */}
           <Picture
             className={styles.secondary_banner}
             url={img2.src}
             urlSm={img2Sm.src}
           />
+          {/* </div> */}
         </div>
         <div className={styles.card}>
+          {/* <div className={styles.img_wrapper}> */}
           <Picture
             className={styles.secondary_banner}
             url={img3.src}
             urlSm={img3Sm.src}
           />
+          {/* </div> */}
         </div>
       </div>
       <Button rightIcon={<img src={arrowRight.src} alt="" />}>

@@ -89,6 +89,9 @@
   .card {
     --card-radius: 1.25rem;
   }
+  .card:first-child {
+    max-width: 55%;
+  }
   .content_container {
     --contentct-fdir: row;
     --contentct-my: 3.75rem;
