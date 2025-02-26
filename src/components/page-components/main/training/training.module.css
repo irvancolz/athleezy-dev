@@ -26,25 +26,31 @@
   border: 1px solid var(--col-brown);
   background-color: var(--col-gray-100);
   position: relative;
+  transition: all 0.5s linear;
 }
 
-.main_banner,
-.secondary_banner,
-.main_banner *,
-.secondary_banner * {
+.img_wrapper {
+  --img-radius: 0.75rem;
+  border-radius: var(--img-radius);
+  overflow: hidden;
+  aspect-ratio: 345/240;
+  cursor: pointer;
+}
+
+.img_wrapper * {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
   width: 100%;
   max-width: 100%;
-  border-radius: 0.75rem;
+  min-width: 100%;
+  object-fit: cover;
+  border-radius: var(--img-radius);
+  transition: scale 0.5s ease-in-out;
 }
 
-.main_banner {
-  aspect-ratio: 345/240;
-  display: flex;
-}
-
-.secondary_banner {
-  aspect-ratio: 345/200;
-  display: flex;
+.card[data-expanded="false"] .img_wrapper:hover * {
+  scale: 1.0534567;
 }
 
 .content_container {
@@ -60,9 +66,24 @@
 }
 
 .banner_body {
-  --bannerbdy-my: 1rem 2rem;
-  padding: 0.5rem;
-  margin-block: var(--bannerbdy-my);
+  --bannerbdy-p: 0.5rem 1rem;
+  padding: var(--bannerbdy-p);
+  transition: all 0.5s ease-out;
+  transform-origin: top;
+}
+
+.card[data-expanded="false"] .banner_body {
+  scale: 1 0;
+  height: 0px;
+  padding: 0 0;
+}
+
+.card[data-expanded="false"] .img_wrapper * {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  min-width: 100%;
+  object-fit: cover;
 }
 
 .banner_title {
@@ -75,8 +96,8 @@
   max-width: var(--actct-maw);
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
   margin-inline: auto;
+  margin-top: 2rem;
 }
 
 .actions_container > * {
@@ -88,6 +109,11 @@
 @media (min-width: 768px) {
   .card {
     --card-radius: 1.25rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition-duration: 1s;
+    max-height: 40rem;
   }
   .card:first-child {
     max-width: 55%;
@@ -97,23 +123,38 @@
     --contentct-my: 3.75rem;
     align-items: normal;
   }
-  .main_banner {
-    aspect-ratio: 660/328;
-    border-radius: 1rem;
+
+  .card[data-expanded="true"] {
+    flex-shrink: 0.53;
+    max-width: 55%;
+    background-position: left center;
   }
-  .secondary_banner {
+  .card[data-expanded="false"] {
+    flex-shrink: 4.3;
+  }
+
+  .card[data-expanded="false"] .banner_body {
+    scale: 1 1;
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
+
+  .img_wrapper {
     aspect-ratio: unset;
-    border-radius: 1rem;
     height: 100%;
-    flex-grow: 1;
-    flex-basis: 100%;
-    min-height: 100%;
-    object-fit: cover;
+    --img-radius: 1rem;
+  }
+
+  .card[data-expanded="true"] .img_wrapper {
+    aspect-ratio: 660/328;
+    width: 100%;
+    height: auto;
   }
 
   .banner_body {
-    --bannerbdy-my: 1.25rem 2rem;
+    --bannerbdy-p: 0.5rem 1.5rem;
   }
+
   .banner_title {
     --bannertitle-fsz: 1.25rem;
   }

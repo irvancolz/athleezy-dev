@@ -1,3 +1,4 @@
+"use client";
 import { Button, Picture, SectionWrapper, Text } from "@/components/primitives";
 import styles from "./training.module.css";
 import { SectionHeader } from "@/components/components";
@@ -9,6 +10,7 @@ import img2Sm from "@public/training-and-development-2-sm.png";
 import img3 from "@public/training-and-development-3.png";
 import img3Sm from "@public/training-and-development-3-sm.png";
 import arrowRight from "@public/right-arrow.svg";
+import { useState } from "react";
 
 const playIcon = (
   <svg
@@ -33,7 +35,32 @@ const playIcon = (
   </svg>
 );
 
+const CONTENT_LIST = [
+  {
+    img: img1,
+    imgSm: img1Sm,
+    title: "The Perfect Street Soccer Dribble",
+    description:
+      "The Perfect Street Soccer Dribble is a smooth and creative move that helps you outsmart opponents in tight spaces. It combines quick footwork, close ball control, and clever tricks to keep defenders guessing.",
+  },
+  {
+    img: img2,
+    imgSm: img2Sm,
+    title: "The Perfect Street Soccer Dribble",
+    description:
+      "The Perfect Street Soccer Dribble is a smooth and creative move that helps you outsmart opponents in tight spaces. It combines quick footwork, close ball control, and clever tricks to keep defenders guessing.",
+  },
+  {
+    img: img3,
+    imgSm: img3Sm,
+    title: "The Perfect Street Soccer Dribble",
+    description:
+      "The Perfect Street Soccer Dribble is a smooth and creative move that helps you outsmart opponents in tight spaces. It combines quick footwork, close ball control, and clever tricks to keep defenders guessing.",
+  },
+];
+
 export function MainTrainingAndDevelopment() {
+  const [active, setActive] = useState<number>(0);
   return (
     <SectionWrapper id="training" className={styles.container}>
       <div className={styles.header}>
@@ -50,7 +77,31 @@ export function MainTrainingAndDevelopment() {
         </Text>
       </div>
       <div className={styles.content_container}>
-        <div className={styles.card}>
+        {CONTENT_LIST.map((el, i) => {
+          return (
+            <div key={i} className={styles.card} data-expanded={i == active}>
+              <div className={styles.img_wrapper}>
+                <Picture
+                  onClick={() => setActive(i)}
+                  url={el.img.src}
+                  urlSm={el.imgSm.src}
+                  className={styles.banner}
+                />
+              </div>
+              <div className={styles.banner_body}>
+                <h3 className={styles.banner_title}>{el.title}</h3>
+                <Text color="dark">{el.description}</Text>
+                <div className={styles.actions_container}>
+                  <Button variant="secondary">see details</Button>
+                  <Button variant="primary" leftIcon={playIcon}>
+                    watch the video
+                  </Button>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+        {/* <div className={styles.card}>
           <Picture
             url={img1.src}
             urlSm={img1Sm.src}
@@ -73,25 +124,21 @@ export function MainTrainingAndDevelopment() {
               watch the video
             </Button>
           </div>
-        </div>
-        <div className={styles.card}>
-          {/* <div className={styles.img_wrapper}> */}
+        </div> */}
+        {/* <div className={styles.card}>
           <Picture
             className={styles.secondary_banner}
             url={img2.src}
             urlSm={img2Sm.src}
           />
-          {/* </div> */}
         </div>
         <div className={styles.card}>
-          {/* <div className={styles.img_wrapper}> */}
           <Picture
             className={styles.secondary_banner}
             url={img3.src}
             urlSm={img3Sm.src}
           />
-          {/* </div> */}
-        </div>
+        </div> */}
       </div>
       <Button rightIcon={<img src={arrowRight.src} alt="" />}>
         see more tutorial
